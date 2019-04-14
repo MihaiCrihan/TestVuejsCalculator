@@ -4,14 +4,15 @@
         <input @keyup="sumXY()" type="text" v-model="x">
         <span> y </span>
         <input @keyup="sumXY()" type="text" v-model="y">
-        <span :sum="summ"> = {{summ}}</span>
+        <span> = {{summ}}</span>
+        
 
     </div>
 </template>
 
 <script>
 
-import h3 from './Output.vue'
+import Input from './Output.vue'
 
 export default {
   name: 'Input',
@@ -23,7 +24,7 @@ export default {
     }
   },
   comments:{
-    'h3' : h3
+    'input' : Input
   },
   methods:{
 		sumXY(){

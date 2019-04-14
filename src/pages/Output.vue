@@ -1,13 +1,15 @@
 <template>
     <div>
-      
+      <span> = {{summ}}</span>
+
     </div>
 </template>
 
 <script>
 export default {
  name: 'Output',
- props:['summ']
+ props: ['sum'],
+ 
 }
 </script>
 

@@ -1,0 +1,6 @@
+{
+    "students": [
+      { "id": 1, "name": "Ion Creanga", "age": 120},
+      { "id": 2, "name": "Mihai Eminescu", "age": 95}
+    ]
+  }
