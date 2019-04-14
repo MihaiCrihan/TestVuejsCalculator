@@ -1,36 +1,35 @@
 <template>
     <div>
         <span> x </span>
-        <input @keyup="sumXY()" type="text" v-model="x">
+        <input type="text" v-model="xvar">
         <span> y </span>
-        <input @keyup="sumXY()" type="text" v-model="y">
-        <span> = {{summ}}</span>
-        
+        <input type="text" v-model="yvar">       
 
     </div>
 </template>
 
 <script>
 
-import Input from './Output.vue'
-
 export default {
   name: 'Input',
-   data() {
-    return {
-      x:'',
-      y:'',
-      summ:''
+  computed: {
+    xvar : {
+      get : function(){
+        return this.$store.getters.getX
+      },
+      set : function(val){
+        this.$store.commit("setX", val)
+      }
+    },
+    yvar : {
+      get : function(){
+        return this.$store.getters.getY
+      },
+      set : function(val){
+        this.$store.commit("setY", val)
     }
-  },
-  comments:{
-    'input' : Input
-  },
-  methods:{
-		sumXY(){
-			this.summ = Number(this.x) + Number(this.y);
-		},
-	}
+  }
+  }
 }
 </script>
 

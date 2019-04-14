@@ -28,5 +28,5 @@ export default new Router({
       name: 'Results',
       component: Results
     }
-  ],
+  ]
 })
