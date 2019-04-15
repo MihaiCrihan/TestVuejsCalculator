@@ -27,13 +27,12 @@ const store = new Vuex.Store({
   },
   actions: {
     fetchData (context) {
-      fetch('http://localhost:3004/data')
+      fetch('http://localhost:3004/numbers')
         .then(response => {
           return response.json()
         })
         .then(data => {
-          context.commit('setX', data[0].value)
-          context.commit('setY', data[1].value)
+          context.commit('setNumbers', data)
         })
     }
   }
